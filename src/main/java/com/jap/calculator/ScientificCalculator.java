@@ -25,17 +25,21 @@ public class ScientificCalculator {
     public long power(int num1, int num2) throws CalculatorException {
 		//if num1 is less than num2 than throw the userdefined exception with proper message
 		//else use Math pow method and return the value
+		if(num2<0||num1<0){
+			throw new CalculatorException("both numbers can't be or negative.");
+		}
 
-
-		return -1;
+		return (long) Math.pow(num1,num2);
     }
     
     public double squareRoot(int num) throws CalculatorException
     {
 		//check if num is equal to or less than 0 than throw the userdefined exception with proper message
 			//or else call sqrt method of Math class and return the value
-
-		return -1;
+		if (num<=0){
+			throw new CalculatorException("number can't be 0 or negative.");
+		}
+		return Math.sqrt(num);
     }
 
 	public static void main(String[] args) {
@@ -46,5 +50,6 @@ public class ScientificCalculator {
 			throw new RuntimeException(e);
 		}
 		//Call all the methods one by one and surround them by try and respective catch blocks.
+
 	}
 }
