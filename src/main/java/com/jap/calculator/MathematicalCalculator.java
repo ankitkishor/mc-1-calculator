@@ -6,13 +6,25 @@ public class MathematicalCalculator {
 	{
 		return num1 + num2;
 	}
+	public double decimalValueAdd(double num1, double num2)
+	{
+		return num1 + num2;
+	}
 	public int subtract(int num1, int num2)
+	{
+		return num1 - num2;
+	}
+	public double decimalValueSubtract(double num1, double num2)
 	{
 		return num1 - num2;
 	}
 	public int multiply(int num1, int num2)
 	{
 
+		return num1 * num2;
+	}
+	public double decimalValueMultiple(double num1, double num2)
+	{
 		return num1 * num2;
 	}
 	public int divide(int num1, int num2)
@@ -32,5 +44,9 @@ public class MathematicalCalculator {
 	public int modulo(int num1, int num2)
 	{
 		return num1 % num2;
+	}
+	public int decimalValueModulo(double num1, double num2)
+	{
+		return (int) (num1 % num2);
 	}
 }
