@@ -45,11 +45,25 @@ public class ScientificCalculator {
 	public static void main(String[] args) {
 		ScientificCalculator scientificCalculator = new ScientificCalculator();
 		try {
-			scientificCalculator.cielOfANumber(10);
+			scientificCalculator.cielOfANumber(10.23f);
 		} catch (CalculatorException e) {
 			throw new RuntimeException(e);
 		}
 		//Call all the methods one by one and surround them by try and respective catch blocks.
-
+		try {
+			scientificCalculator.floorOfANumber(11.55f);
+		}catch (CalculatorException exception){
+			throw new RuntimeException(exception);
+		}
+		try {
+			scientificCalculator.power(4,3);
+		}catch (CalculatorException exception){
+			throw new RuntimeException(exception);
+		}
+		try {
+			scientificCalculator.squareRoot(144);
+		}catch (CalculatorException exception){
+			throw new RuntimeException(exception);
+		}
 	}
 }
